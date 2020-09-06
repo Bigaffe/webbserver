@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js" defer></script>
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Add vocabulary</title>
+</head>
+<body>
+    <script src="/__/firebase/7.19.1/firebase-app.js"></script>
+    <script src="/__/firebase/7.19.1/firebase-analytics.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <div id="addTodo" class="hidden">
+        <form onsubmit="addVocabulary(this)" action="" method="get">
+        <input type="text" name="svenska" placeholder="Swedish"><br>
+        <input type="text" name="english" placeholder="English"><br>
+        <input type="submit" value="Add vocabulary" style="width:177px">
+        <hr>
+        </form>
+    </div>
+
+    
+    <div class="searchGlossary">
+        <div class="search">
+            <input onkeyup="searchSwedishVocable(this)" type="text" placeholder="Enter swedish vocabulary" id="sv">
+            <input onkeyup="searchEnglishVocable(this)" type="text" placeholder="Enter english vocabulary" id="en">
+            <hr>
+        </div>
+    </div>
+    <div class="sortGlossary">
+        <div class="sort">
+            <button onclick="sortGlossary(this)" name="swedishButton" id="sve" style="width: 177px;"> Sort Swedish </button>
+            <button onclick="sortGlossary(this)" name="englishButton" id="eng" style="width: 177px;">Sort English</button>
+            <hr>
+        </div>
+    </div>
+        <!--<i class="far fa-calendar-plus" id="addTodoButton"></i> !-->
+
+
+    
+    
+    <main>
+            <div class="vocabulary">
+                <i> Swedish</i> <i> English</i>
+                <button> Delete</button>
+            </div>
+
+    </main>
+
+</body>
+</html>
